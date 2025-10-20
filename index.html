@@ -3,16 +3,30 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>PDF Viewer</title>
+  <title>Zoomed PDF</title>
   <style>
-    html,body{margin:0;height:100%;background:#1a1a1a}
-    iframe{width:100%;height:100vh;border:0}
+    html,body{
+      margin:0; background:#111; height:100%; overflow:hidden;
+    }
+    .framewrap{
+      width:100%;
+      height:100%;
+      transform:scale(1.4);         /* 1.4 = 140% zoom  */
+      transform-origin:top left;
+    }
+    iframe{
+      width:100%;
+      height:100%;
+      border:0;
+      pointer-events:none;          /* disables all interactions (no zoom or menu) */
+    }
   </style>
 </head>
 <body>
-  <!-- Replace the link below with your actual GitHub PDF link -->
-  <iframe
-    src="https://drive.google.com/viewerng/viewer?embedded=true&url=https://esadpolicegovae.github.io/Abu-Dhabi-Police/AbuDhabi%20Police..pdf">
-  </iframe>
+  <div class="framewrap">
+    <iframe
+      src="https://drive.google.com/viewerng/viewer?embedded=true&url=https://esadpolicegovae.github.io/Abu-Dhabi-Police/AbuDhabi%20Police..pdf">
+    </iframe>
+  </div>
 </body>
 </html>
