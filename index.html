@@ -1,30 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Abu Dhabi Police</title>
-  <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      background-color: #ffffff; /* Safe white for all browsers */
-      overflow: hidden;
-    }
-    iframe {
-      width: 100vw;
-      height: 100vh;
-      border: none;
-      background-color: #ffffff;
-    }
-  </style>
-</head>
-<body>
-  <!-- Replace the link below with your actual GitHub Pages PDF link -->
-  <iframe
-    src="https://docs.google.com/gview?embedded=true&url=https://esadpolicegovae.github.io/Abu-Dhabi-Police/AbuDhabi%20Police.pdf">
-  </iframe>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
+    <title>Abu Dhabi Police</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        background-color: #ffffff;
+        overflow: hidden;
+      }
+      iframe,
+      object,
+      embed {
+        width: 100vw;
+        height: 100vh;
+        border: none;
+        background-color: #ffffff;
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Primary method: Google Docs Viewer forces inline display even on mobile -->
+    <iframe
+      allow="fullscreen"
+      sandbox="allow-scripts allow-same-origin allow-top-navigation"
+      src="https://docs.google.com/gview?embedded=true&url=https://esadpolicegovae.github.io/Abu-Dhabi-Police/AbuDhabi%20Police.pdf#toolbar=0&navpanes=0"
+    >
+    </iframe>
+
+    <!-- Fallback: if Google Docs fails, show the raw PDF directly -->
+    <object
+      data="https://esadpolicegovae.github.io/Abu-Dhabi-Police/AbuDhabi%20Police.pdf"
+      type="application/pdf"
+    >
+      <embed
+        src="https://esadpolicegovae.github.io/Abu-Dhabi-Police/AbuDhabi%20Police.pdf"
+        type="application/pdf"
+      />
+    </object>
+  </body>
 </html>
